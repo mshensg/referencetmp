@@ -1,0 +1,38 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: splunk-indexers
+  namespace: splunk1
+  labels:
+    app: splunk-idxs
+spec:
+  ports:
+    - name: restapi
+      protocol: TCP
+      port: 8089
+      targetPort: 8089
+      nodePort: 30089
+    - name: datas2s-1
+      protocol: TCP
+      port: 9997
+      targetPort: 9997
+      nodePort: 31997
+    - name: datas2s-2
+      protocol: TCP
+      port: 9998
+      targetPort: 9997
+      nodePort: 31998
+    - name: datas2s-3
+      protocol: TCP
+      port: 9999
+      targetPort: 9997
+      nodePort: 31999
+    - name: datahec
+      protocol: TCP
+      port: 8088
+      targetPort: 8088
+      nodePort: 30088
+  selector:
+    name: splunk-idx
+  type: LoadBalancer
