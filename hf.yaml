@@ -1,0 +1,356 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: splunk-hec-cert
+  namespace: splunk1
+data:
+  hec_certificate.pem: |-
+    -----BEGIN CERTIFICATE-----
+    MIIDyjCCArICCQDqzCDUcBPALjANBgkqhkiG9w0BAQsFADCBojELMAkGA1UEBhMC
+    U0cxEjAQBgNVBAgMCVNpbmdhcG9yZTESMBAGA1UEBwwJU2luZ2Fwb3JlMSUwIwYD
+    VQQKDBxTcGx1bmsgUHJvZmVzc2lvbmFsIFNlcnZpY2VzMQswCQYDVQQLDAJQUzEW
+    MBQGA1UEAwwNcHMuc3BsdW5rLmNvbTEfMB0GCSqGSIb3DQEJARYQbXNoZW5Ac3Bs
+    dW5rLmNvbTAeFw0yMzA5MTgwNzM5MjBaFw0yOTA5MTYwNzM5MjBaMIGqMQswCQYD
+    VQQGEwJTRzESMBAGA1UECAwJU2luZ2Fwb3JlMRIwEAYDVQQHDAlTaW5nYXBvcmUx
+    KTAnBgNVBAoMIEhFQyBTcGx1bmsgUHJvZmVzc2lvbmFsIFNlcnZpY2VzMQswCQYD
+    VQQLDAJQUzEaMBgGA1UEAwwRaGVjLnBzLnNwbHVuay5jb20xHzAdBgkqhkiG9w0B
+    CQEWEG1zaGVuQHNwbHVuay5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+    AoIBAQCwqz3BBHUBBtvxtl3GXz84qD1ZJYF7U2qdCJGFfdiCxVeTwn1MOGODYDoj
+    6St3jrsQC/IYfB99WWlNOH/jteQtBBXupxzJ4W4/xxVPyQKcvTarW+en+S08JUKL
+    zkhTKXLv+/5Z3LrnIxQ++TXQm2Cirf5tElUFwtpxCY4VQBtdzSy3HkcPPKF4sfbV
+    QVdUziVz4juJd6SvP0qxEqkDrsW8RGV7TJ51UBzT77zRfmXjV0Eeu/LWXjBHS/yI
+    fzHV6bMxuTi0erWeCjq86A2BRIjQY0kPgIJjKRHVux7Du2VaDE+RwHXkzApeOSKb
+    XuOxaWt51bDYHIW7X9gdj8IqJxRjAgMBAAEwDQYJKoZIhvcNAQELBQADggEBADOS
+    QkMt1UY95oFmk7s69qIkVXswJs0JaS6gUmeuoSMlFfq0Kr5wc9xFF1Yc8nWIuYr4
+    YG14GlY4NsjI76alZlEyn1kFr/QsmasyaMSTogf0Ao4psBRbuCt51nav7ZUudNrc
+    c1B4sFWxpDtGCahghxUSkQ+BoMTGKCFzjPzD/a47DaHu2b+IFIPLpQ1Suvu3Y/7m
+    5+3QNHUmokJAWk+LUMSDUHZwKVRm9nY+2K7XiH2GIiFgPBsNru59uamfyWVh2hek
+    R2a51nEEHm0PfNimar9OgQzLxLxKCGMA4lsDXHQAE4ei6Ga7pcLG1gy//VXAslH3
+    oqgHDRKOxqTPiYDcPxg=
+    -----END CERTIFICATE-----
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEowIBAAKCAQEAsKs9wQR1AQbb8bZdxl8/OKg9WSWBe1NqnQiRhX3YgsVXk8J9
+    TDhjg2A6I+krd467EAvyGHwffVlpTTh/47XkLQQV7qccyeFuP8cVT8kCnL02q1vn
+    p/ktPCVCi85IUyly7/v+Wdy65yMUPvk10Jtgoq3+bRJVBcLacQmOFUAbXc0stx5H
+    DzyheLH21UFXVM4lc+I7iXekrz9KsRKpA67FvERle0yedVAc0++80X5l41dBHrvy
+    1l4wR0v8iH8x1emzMbk4tHq1ngo6vOgNgUSI0GNJD4CCYykR1bsew7tlWgxPkcB1
+    5MwKXjkim17jsWlredWw2ByFu1/YHY/CKicUYwIDAQABAoIBAHVUtQWstRxCdu5X
+    5H2roiw5p8y92PmT09mI6ESU6Kco8tniMB7f0E9fKB3TbJfRhjDJDjbusGcqa4Hq
+    hR0xHuI6tWozOC5ndjYLPP8pC4AXNeimd/qZxU4NnN2G2YfJnlj9rdX2f3akWHze
+    O7xYhNxl2/SKWUcjOroZ03APjF1FnMpI/gi/KXzg4GyTzt9apFjgxtIdZlBQ60p0
+    wHoTeAbsWwoKzs0fV/nbSq2qICu+VY8tMFCbT0Pli4Ssq9VFEFNH5YAJufPJV8NW
+    JH6HPJ0pHNNniqWxpgSNZsARynMms/z5umrqglc4Uiz4yf3ewlqvpg5zoycuzscY
+    2HXBeKkCgYEA2+eRVfkYsrFcteY4vovbI3tnOe8JsVobKonzEivvh8SFr87CQqAC
+    pvabuEKufVYMTjvwnC2e/+l66w0ka5NzRUoWCLCuEqw9RWuHZeQ4iNnxePXbcS1H
+    KdfppRdvpiELgPgMRrWq2TGlGRHaLf2xRW58yaBbsNxMtw3Be4JHct8CgYEAzarn
+    MbdEi5V70WoZtbjLjh8+80Iq8aVuNqjogfm/1GIqcE2a7yhqa9RJVuPMMrJ2RXw1
+    Ip6J18aC+w9Cj/7genRNZhFd94gj83AIjdkHoQGsn7VlNCPviqjrb2sirxVsingM
+    8UCLtS8ghM89cROdm/IgasXNre+MrhxdiGFFMv0CgYEAtLCP8Q6exqWJwkULNzZ/
+    t6X8adQKKNobHFcBjVrglLRcDNtdL5V+2GYmCb9w1LfRoK8Lw6iQz0Kvp1fDJ0mf
+    G74GYNmcDufL6LC0LnraIUjDa1rJFzPXF4C8ENUy/lSEuVIX9Dntyk1KlVDf745X
+    DO/+RUYoUSiTOI5q/utLfg0CgYBhSxcBytvvWHDxmUq+T8Rj4F4sP8IG/KaNzwvm
+    6NoZw7Kl2+COgMUPa6aiJzNjTE9tAZw1W2CEJhGyaP6pFf7ljv1Kaq7UOaAgOoCh
+    cekM/rjF+M7+gn2AT/bIh5spzm3Bd5dPzaQJu1ib21oKkyf9LOau/BIX1Xnsp9iL
+    etB8lQKBgE/C12/+Xp63bRZW/cyDWpeWNU9ZgmbFYDCN1F9pX0UlRLwvJfb4jBbz
+    LVgd4kBOT7syNsq0rHhD9UJDzfFzqJu+Eg9iOBMemcv9dxmqOkIqceDc/30BxHjd
+    2YljHPooiZaJshq3WIIswrbqBYTNvL5f/qu0M9YGs9xXRfeTa3xI
+    -----END RSA PRIVATE KEY-----
+    -----BEGIN CERTIFICATE-----
+    MIIDwjCCAqoCCQCFwaMzRlxjhTANBgkqhkiG9w0BAQ0FADCBojELMAkGA1UEBhMC
+    U0cxEjAQBgNVBAgMCVNpbmdhcG9yZTESMBAGA1UEBwwJU2luZ2Fwb3JlMSUwIwYD
+    VQQKDBxTcGx1bmsgUHJvZmVzc2lvbmFsIFNlcnZpY2VzMQswCQYDVQQLDAJQUzEW
+    MBQGA1UEAwwNcHMuc3BsdW5rLmNvbTEfMB0GCSqGSIb3DQEJARYQbXNoZW5Ac3Bs
+    dW5rLmNvbTAeFw0yMzA5MTgwNzM3MTlaFw0zMzA5MTUwNzM3MTlaMIGiMQswCQYD
+    VQQGEwJTRzESMBAGA1UECAwJU2luZ2Fwb3JlMRIwEAYDVQQHDAlTaW5nYXBvcmUx
+    JTAjBgNVBAoMHFNwbHVuayBQcm9mZXNzaW9uYWwgU2VydmljZXMxCzAJBgNVBAsM
+    AlBTMRYwFAYDVQQDDA1wcy5zcGx1bmsuY29tMR8wHQYJKoZIhvcNAQkBFhBtc2hl
+    bkBzcGx1bmsuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm46X
+    1aYuvJAv2JBrrqX18L+tKo/stVafiTWR1p9SG9kmyV8BKtCa/PJLR8p6jDGre08Y
+    TcoZVELAC8w1utjzTKkaSNZPf0NxYlbfJDaPDi+2roQtBH2ieaCtjhUlThPeGwDB
+    enyf/Vkxp8q38BMrHS4BiBLIyr7FDFGwclm4QRfbZzTuoLqwJk8mP9wJ2opVWSoj
+    /r6xfCdcY210fTC3G3JblDh9U9YKbLsrpaGnfS5DpJBiAvB38RAQWIc/5fhMlWLn
+    4TELb1Q+Mc7S0eJxk+FxcUHn560UMo308K9ePF5EMnZEe5P0aeKgXyZu9DqK9GpV
+    KpEIpnD0wBYxB4U+dwIDAQABMA0GCSqGSIb3DQEBDQUAA4IBAQAKyv92YmkAavHy
+    TVUPvjZ1TVqWa78yAIcUZUfYdaQxCtpHqFOC6gVRY5MuJ59+F7oYtwUfbxGHToQZ
+    hpCzkXBE3K/r0U1UaTHa3ckRc57Gknu6b8tRBnWSRQ/4YEpJ6xUdU0LYGGjPNu9T
+    KOsRuzsDsTrKxX6f/9MLdIrJhz8H7mDMqItI2v5syZqWOa21u61uX2phd0lEmmoZ
+    QTrdSQ0W0WFGUyJtNViL0cX2oFKdTcMRR7ygQc0bgZEKMh3H0zSgllPNZ4BkzVzR
+    AxAwfLE9YMQpRVwT2m4QB1nYCfpc0pvU6DeFtazJ3BWVv4nHxjXnzIIS42d7KcpO
+    M/m5moLP
+    -----END CERTIFICATE-----
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: splunk-hf-cm
+  namespace: splunk1
+data:
+  password.txt: |-
+    SPLKChanged!
+  certpassword.txt: |-
+    SPLKChanged!
+  heavyforwarder.yml: |-
+    ---
+    splunk:
+      role: splunk_standalone
+      admin_user: admin
+      password: "{{ lookup('env','SPLUNK_PASSWORD') }}"
+      app_paths_install:
+        default:
+        - /opt/splunk_apps/menlo-security-technology-add-on_221.tgz
+        - /opt/splunk_apps/splunk-add-on-for-google-cloud-platform_411.tgz
+        - /opt/splunk_apps/sophos-central_113.tgz
+        - /opt/splunk_apps/splunk-add-on-for-microsoft-cloud-services_510.tgz
+      conf:
+        - key: inputs
+          value:
+            directory: /opt/splunk/etc/system/local
+            content:
+              http:
+                port: 8088
+                disabled: false
+                enableSSL: true
+                serverCert: /opt/splunk_heccert/hec_certificate.pem
+        - key: web
+          value:
+            directory: /opt/splunk/etc/apps/enable_https/local
+            content:
+              settings:
+                enableSplunkWebSSL: true
+        - key: server
+          value:
+            directory: /opt/splunk/etc/apps/migrate_kvstore/local
+            content:
+              kvstore:
+                storageEngine: wiredTiger
+                storageEngineMigration: true     
+              general:
+                site: site0
+              diskUsage:
+                minFreeSpace: 1000
+        - key: global-banner
+          value:
+            diectory: /opt/splunk/etc/system/local
+            content:
+              BANNER_MESSAGE_SINGLETON:
+                global_banner.background_color: yellow
+                global_banner.message: Standalone
+                global_banner.visible: 1
+    application_configurations:
+    - configurations:
+        interval: 4568
+        index: main21
+        api_token: 0123456789abcdef12345678
+        log_type: web
+      additional_configuration:
+        name: menlo123
+      rest_endpoint:
+        app: TA_menlosecurity_api_inputs
+        api: TA_menlosecurity_api_inputs_menlo_log_api
+    - configurations:
+        interval: 4682
+        index: main12
+        api_token: 0123456789abcdef12345678
+        log_type: web
+      additional_configuration:
+        name: menlo234
+      rest_endpoint:
+        app: TA_menlosecurity_api_inputs
+        api: TA_menlosecurity_api_inputs_menlo_log_api
+    - configurations:
+        google_credentials: "{\"name\":\"this is useless\"}"
+      additional_configuration:
+        name: default_storage
+      rest_endpoint:
+        app: Splunk_TA_google-cloudplatform
+        api: splunk_ta_google/google_credentials
+  update.yaml: |-
+    ---
+    - name: Check config exists for {{ item.rest_endpoint.app }}/{{ item.rest_endpoint.api }}/{{ item.additional_configuration.name }}
+      uri:
+        url: "{{ cert_prefix }}://127.0.0.1:{{ splunk.svc_port }}/servicesNS/nobody/{{ item.rest_endpoint.app }}/{{ item.rest_endpoint.api }}/{{ item.additional_configuration.name }}"
+        method: GET
+        user: "{{ splunk.admin_user }}"
+        password: "{{ splunk.password }}"
+        force_basic_auth: yes
+        validate_certs: false
+        status_code: [200,404,500]
+        timeout: 10
+        use_proxy: no
+      register: item_exists
+      changed_when: item_exists.status == 200 or item_exists.status == 404 or item_exists.status == 500
+      until: item_exists is succeeded
+      retries: 3
+      delay: "{{ retry_delay }}"
+      no_log: "{{ hide_password }}"
+
+    - name: Create new config for {{ item.rest_endpoint.app }}/{{ item.rest_endpoint.api }}/{{ item.additional_configuration.name }}
+      uri:
+        url: "{{ cert_prefix }}://127.0.0.1:{{ splunk.svc_port }}/servicesNS/nobody/{{ item.rest_endpoint.app }}/{{ item.rest_endpoint.api }}/"
+        method: POST
+        user: "{{ splunk.admin_user }}"
+        password: "{{ splunk.password }}"
+        force_basic_auth: yes
+        validate_certs: false
+        status_code: [201,200]
+        timeout: 10
+        use_proxy: no
+        body_format: form-urlencoded
+        body: "{{ item.configurations | combine(item.additional_configuration) }}"
+      when: item_exists.status == 404 or item_exists.status == 500
+      no_log: "{{ hide_password }}"
+
+    - name: Update config for {{ item.rest_endpoint.app }}/{{ item.rest_endpoint.api }}/{{ item.additional_configuration.name }}
+      uri:
+        url: "{{ cert_prefix }}://127.0.0.1:{{ splunk.svc_port }}/servicesNS/nobody/{{ item.rest_endpoint.app }}/{{ item.rest_endpoint.api }}/{{ item.additional_configuration.name }}"
+        method: POST
+        user: "{{ splunk.admin_user }}"
+        password: "{{ splunk.password }}"
+        force_basic_auth: yes
+        validate_certs: false
+        status_code: [201,200]
+        timeout: 10
+        body_format: form-urlencoded
+        body: "{{ item.configurations }}"
+      when: item_exists.status == 200
+      no_log: "{{ hide_password }}"
+
+    - name: show error if incorrect code
+      debug:
+        msg: "{{ item_exists }}"
+      when: item_exists.status != 200 and item_exists.status != 404 and item_exists.status != 500
+      no_log: "{{ hide_password }}"
+  app_config.yaml: |-
+    ---
+    - name: Setup Application Configuration
+      hosts: localhost
+      gather_facts: true
+      strategy: free
+      environment: "{{ ansible_environment | default({}) }}"
+
+      tasks:
+        - name: multiple tasks
+          include_tasks: "{{ playbook_dir }}/update.yaml"
+          loop: "{{ application_configurations }}"
+          no_log: "{{ hide_password }}"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: splunk-hf-var-pv
+  namespace: splunk1
+  labels:
+    type: local
+    name: splunk-hf-var-pv
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/k8s/splunk_hf_var"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: splunk-hf-var-pvc
+  namespace: splunk1
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  volumeName: splunk-hf-var-pv
+  selector:
+    matchLabels: 
+      name: splunk-hf-var-pv
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: splunk-heavyforwarder
+  namespace: splunk1
+  labels:
+    app: splunk-heavyforwarder
+spec:
+  ports:
+    - name: webgui
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
+    - name: restapi
+      protocol: TCP
+      port: 8089
+      targetPort: 8089
+  selector:
+    app: splunk-heavyforwarder
+  type: LoadBalancer
+  loadBalancerIP: 172.31.38.215
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: splunk-heavyforwarder
+  namespace: splunk1
+  labels:
+    app: splunk-heavyforwarder
+spec:
+  hostname: splunk-heavyforwarder
+  subdomain: splunk-heavyforwarder
+  containers:
+  - name: splunk-heavyforwarder
+    image: docker.io/splunk/splunk:9.0.5
+    resources:
+      limits:
+        cpu: "4"
+        memory: 8000Mi
+      requests:
+        cpu: "1"
+        memory: 2000Mi
+    ports:
+    - containerPort: 8000
+      hostPort: 8000
+    - containerPort: 8089
+    - containerPort: 8088
+      hostPort: 8088
+    env:
+    - name: SPLUNK_START_ARGS
+      value: --accept-license
+    command: [ "/bin/bash", "-c", "--" ]
+    args:
+    - cd /opt/ansible;
+      export SPLUNK_PASSWORD=$(head -1 /opt/ansible_instruction/password.txt);
+      export HEC_CERT_PASSWORD=$(head -1 /opt/ansible_instruction/certpassword.txt);
+      ansible-playbook --extra-vars "@/opt/ansible_instruction/heavyforwarder.yml" -i inventory/environ.py -l localhost site.yml;
+      ansible-playbook --extra-vars "@/opt/ansible_instruction/heavyforwarder.yml" -i inventory/environ.py -l localhost /opt/ansible_instruction/app_config.yaml;
+      /sbin/entrypoint.sh no-provision;
+    volumeMounts:
+    - name: splunk-hf-cm-v
+      mountPath: "/opt/ansible_instruction"
+      readOnly: true
+    - name: splunk-hf-cert-v
+      mountPath: "/opt/splunk_heccert"
+      readOnly: true
+    - mountPath: "/opt/splunk/var"
+      name: splunk-hf-var
+    - mountPath: "/opt/splunk_apps"
+      name: splunk-apps
+  volumes:
+  - name: splunk-hf-cm-v
+    configMap:
+      name: splunk-hf-cm
+  - name: splunk-hf-cert-v
+    configMap:
+      name: splunk-hec-cert
+  - name: splunk-hf-var
+    persistentVolumeClaim:
+      claimName: splunk-hf-var-pvc
+  - name: splunk-apps
+    hostPath:
+      path: /efs/applications
+      type: Directory
+  restartPolicy: OnFailure
