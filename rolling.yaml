@@ -17,7 +17,7 @@ readinessProbe:
     successThreshold: 1
 
 Sample: 
-
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
