@@ -1,0 +1,50 @@
+Outputs.conf
+-----------------
+[rfs:s3]
+batchSizeThresholdKB = 20480
+batchTimeout = 10
+compression = gzip
+dropEventsOnUploadError = true
+ 
+Props.conf
+-----------------
+[default]
+RULESET-ruleset_default = _rule:ruleset_default:route:eval:alldata
+ 
+Transforms.conf (I configured it to skip all the data sent to the internal indexers, we may use the same approach to selectively forward data)
+-----------------------
+[_rule:ruleset_default:route:eval:alldata]
+INGEST_EVAL = 'pd:_destinationKey'=if(match(index, "^_.*"), 'pd:_destinationKey', "_splunk_,rfs:s3")
+STOP_PROCESSING_IF = NOT isnull('pd:_destinationKey') AND 'pd:_destinationKey' != "" AND (isnull('pd:_doRouteClone') OR 'pd:_doRouteClone' == "")
+ 
+Then I set up S3 notification on the bucket to notify an SNS topic and link it to an SQS queue.
+
+
+ 
+After that I use the target system to subscribe to the SQS queue with Custom Data -> SQS based S3 and make the sourcetype as aws:s3:uploadedlogs. Then configure the props.conf and transforms.conf as below:
+ 
+props.conf
+-----------------
+[aws:s3:uploadedlogs]
+BREAK_ONLY_BEFORE_DATE =
+DATETIME_CONFIG =
+LINE_BREAKER = (\[|,)+\{\"time\":\d+
+NO_BINARY_CHECK = true
+SHOULD_LINEMERGE = false
+TRUNCATE = 0
+category = Custom
+disabled = false
+pulldown_type = 1
+TRANSFORMS-setvalues = setvalues
+ 
+transforms.conf
+------------------
+[setvalues]
+INGEST_EVAL=org_message=_raw, s3_file=source, _raw:=replace(_raw,"^(.*)(\])$","\1"), sourcetype=spath(_raw,"sourcetype"), source=spath(_raw,"source"), host=spath(_raw,"host"), _raw=spath(_raw,"event")
+ 
+Then the system will automatically break the lines and put into the index on the target system. The only issue is that the ingest actions do not retain index information in the file uploaded into S3 so we cannot set up the same target index on the target server. However, we can retain the same event format and other default metadata fields (source, host, sourcetype).
+ 
+One same forwarded multiline special formatted event (using collect with output_mode=hec):
+ 
+
+ 
